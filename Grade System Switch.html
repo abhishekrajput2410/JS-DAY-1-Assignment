@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks = prompt("Enter your marks (0-100):");
+marks = Number(marks);
+
+if (isNaN(marks) || marks < 0 || marks > 100) {
+    console.log("Invalid marks. Please enter a number between 0 and 100.");
+} else {
+    let grade;
+    let message;
+
+    switch (true) {
+        case (marks >= 90 && marks <= 100):
+            grade = 'A';
+            message = 'Excellent!';
+            break;
+        case (marks >= 75 && marks <= 89):
+            grade = 'B';
+            message = 'Great job!';
+            break;
+        case (marks >= 60 && marks <= 74):
+            grade = 'C';
+            message = 'Good effort.';
+            break;
+        case (marks >= 40 && marks <= 59):
+            grade = 'D';
+            message = 'You passed.';
+            break;
+        default:
+            grade = 'F';
+            message = 'Better luck next time.';
+            break;
+    }
+
+    console.log(`Your Grade: ${grade}\n${message}`);
+}
+
+    </script>
+</body>
+</html>
